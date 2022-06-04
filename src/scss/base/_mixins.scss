@@ -1,0 +1,30 @@
+//los mixin son como funciones en scss
+/*@mixin nuevoMixin($transform,$size) {
+    font-size: $size;
+    text-transform: $transform;
+}*/
+
+//mixin para utilizar el media query del telefono
+@mixin telefono {
+    @media (min-width: $telefono) {
+        @content;
+    }
+}
+//tablet
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+//compu
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin grid($columnas, $espaciado){
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
+}
